@@ -12,7 +12,7 @@ from config.environment import db_URI
 # ? it will be '__main__'
 app = Flask(__name__)
 
-app.config["SQLALCHEMY_DATABSE_URI"] = db_URI
+app.config["SQLALCHEMY_DATABASE_URI"] = db_URI
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
@@ -20,7 +20,7 @@ ma = Marshmallow(app)
 bcrypt = Bcrypt(app)
 
 
-from controllers import 
+
 # ? Make a very basic route to talk to...
 # * This @ syntax is a 'Decorator'. This decorator tell us
 # * Which route our function belong to (our path for this route)
