@@ -1,5 +1,6 @@
 from app import db
 from models.base import BaseModel
+from models.problem import ProblemModel
 
 class TypeModel(db.Model, BaseModel):
 
@@ -10,4 +11,4 @@ class TypeModel(db.Model, BaseModel):
 
 
   user = db.relationship('UserModel', backref='advice_users')
-  # problem = db.relationship('ProblemModel', backref='problems', cascade="all, delete")
+  problems = db.relationship('ProblemModel', backref='problems', cascade="all, delete")

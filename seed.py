@@ -7,11 +7,11 @@ from models.type_data import type_list
 with app.app_context():
   
   try:
-      print("Recreating databse..")
+      print("Recreating database..")
       db.drop_all()
       db.create_all()
 
-      print("seeding databse 🌱")
+      print("seeding database 🌱")
       db.session.add_all(user_list)
       db.session.commit()
 
@@ -25,8 +25,6 @@ with app.app_context():
 
       db.session.add_all(advice_list)
       db.session.commit()
-
-
 
       print("bye 👋")
   

@@ -20,10 +20,13 @@ ma = Marshmallow(app)
 bcrypt = Bcrypt(app)
 
 
+from controllers import advice, problems, types, users
 
-# ? Make a very basic route to talk to...
+app.register_blueprint(advice.router, url_prefix="/api")
+app.register_blueprint(problems.router, url_prefix="/api")
+app.register_blueprint(types.router, url_prefix="/api")
+app.register_blueprint(users.router, url_prefix="/api")
+
+
 # * This @ syntax is a 'Decorator'. This decorator tell us
 # * Which route our function belong to (our path for this route)
-@app.route("/hello")
-def home():
-    return { "hello": "world" }
