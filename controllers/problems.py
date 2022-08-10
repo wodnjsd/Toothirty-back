@@ -89,13 +89,13 @@ def remove_problem(problem_id):
     return '', HTTPStatus.NO_CONTENT
 
 # #ADD ADVICE TO PROBLEM
-# @router.route("/problems/<int:problem_id>/advice", methods=["POST"])
+# @router.route("/problems/<int:problem_id>/advice/<int:advice_id>", methods=["POST"])
 # @secure_route
-# def create_advice_for_problem(problem_id):
+# def create_advice_for_problem(problem_id, advice_id):
 
-#     advice_dictionary = request.json
+#     # advice_dictionary = request.json
 #     problem = ProblemModel.query.get(problem_id)
-#     advice = AdviceModel.query.get(advice_dictionary)
+#     advice = AdviceModel.query.get(advice_id)
 
 #     if not problem:
 #         return {"message": "Problem not found"}, HTTPStatus.NOT_FOUND,
@@ -104,7 +104,7 @@ def remove_problem(problem_id):
 #         return {"message": "Advice not found"}, HTTPStatus.NOT_FOUND
 
 #     try:
-#         problem.advice.load(advice_dictionary)
+#         problem.advice.append(advice)
 
 #     except ValidationError as e:
 #         return {"errors": e.messages, "message": "Something went wrong"}
