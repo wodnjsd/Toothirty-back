@@ -1,3 +1,5 @@
+import os
 
-db_URI = "postgresql://localhost:5432/teeth_db"
-secret = "Hereisfantasticsecret123"
+
+db_URI = os.getenv('DATABASE_URL', 'postgresql://localhost:5432/teeth_db')
+secret = os.getenv('SECRET', 'Hereisfantasticsecret123')
