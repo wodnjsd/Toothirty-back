@@ -53,8 +53,6 @@ def create_type():
     return type_schema.jsonify(type), HTTPStatus.CREATED
 
 
-
-
 @router.route("/types/<int:type_id>", methods=["DELETE"])
 @secure_route
 def remove_type(type_id):

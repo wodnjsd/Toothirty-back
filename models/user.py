@@ -12,7 +12,6 @@ from models.base import BaseModel
 # ! Import my secret
 from config.environment import secret
 
-
 class UserModel(db.Model, BaseModel):
 
     __tablename__ = "users"
@@ -37,7 +36,6 @@ class UserModel(db.Model, BaseModel):
 
     def generate_token(self):
         # ! Create a token for this user.
-
         # ! Need a payload for the token
         payload = {
             # ! This will expire 1 day from now.

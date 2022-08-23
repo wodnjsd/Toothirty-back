@@ -10,5 +10,4 @@ class ProblemSchema(ma.SQLAlchemyAutoSchema):
 
     advice = fields.Nested("AdviceSchema", many=True)
     type = fields.Nested("TypeSchema", many=True)
-    # ! Get my user for this tea
     user = fields.Nested("UserSchema", many=False)

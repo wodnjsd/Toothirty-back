@@ -5,7 +5,6 @@ from models.advice import AdviceModel
 from models.problem_advice import problem_advice
 
 
-
 class ProblemModel(db.Model, BaseModel):
 
   __tablename__ = "problems"
